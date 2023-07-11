@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin Panel</title>
+</head>
+	<body>
+		<div class="row">
+            <div align="center">
+                <div class="form-group">
+                    <form action="/poweron" method="post"><button name="poweron" class="btn btn-outline-primary" value="poweron">Power On</button></form>
+                    <form action="/poweroff" method="post"><button name="poweroff" class="btn btn-outline-primary" value="shutdown">Power Off</button></form>
+                    <form action="/restart" method="post"><button name="restart" class="btn btn-outline-primary" value="Restart">Restart</button></form>
+                </div>
+
+                <div class="form-group">
+                    <form action="/logout" method="post"><button name="logout" class="btn btn-outline-primary logout" value="logout">Logout</button></form>
+                </div>
+
+                <div class="ub">
+                    <form action="/allstats" method="get" class="ub"><button name="allstats" class="updatebtn" value="update">Update</button></form>
+                </div>
+
+                <div class="form-group">
+                <p>
+                    Powerstate: {{it.ps.powerstate}}<br>
+                    {{@each(it.data) => val, index}}
+                    Temp: {{val.temp}}
+                    Humidity: {{val.humidity}}<br>
+                    ServerInfo: {{val.serverinfo}}<br><br>
+                    {{/each}}
+                </p>
+                </div>
+            </div>
+        </div>
+	</body>
+<link rel="stylesheet" href="./style.css">
+</html>

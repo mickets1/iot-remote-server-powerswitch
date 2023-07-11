@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Panel</title>
+</head>
+	<body>
+		<form action="/login" method="POST">
+		<div class="container">
+			<div class="row">
+				<div class="login-box">
+					<div class="login-title">ADMIN PANEL</div>
+						<div class="login-form">
+							<form>
+								<div class="form-group">
+									<label class="form-control-label">Email</label>
+									<input type="text" class="form-control" id="email" name="email" required>
+								</div>
+
+								<div class="form-group">
+									<label class="form-control-label">PASSWORD</label>
+									<input type="password" class="form-control" id="password" name="password" required>
+								</div>
+
+								<div class="login-button">
+									<button type="submit" class="btn btn-outline-primary">LOGIN</button>
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		</form>
+	</body>
+<link rel="stylesheet" href="./style.css">
+</html>
